@@ -5,7 +5,7 @@ require('function.php');
 @ini_set('max_execution_time',0);
 @ini_set('output_buffering',0);
 
-echo "* Kosongkan proxy jika tidak memakai proxy \n*Jumlah maksimal 10 \n\n";
+echo "* Kosongkan proxy jika tidak memakai proxy \n* Jumlah maksimal 10 \n\n";
 
 $acak       = 'axegram'.acak('1234567890', '5').'';
 $username   = $acak;
