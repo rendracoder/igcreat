@@ -9,6 +9,19 @@ function acak($char, $length = 3){
     return $randomString;
 }
 
+function banner()
+{
+    $string = "
+  _   _ _____ _   _    _    _   _ _____ ____  
+ | \ | |_   _| | | |  / \  | \ | |  ___|  _ \ 
+ |  \| | | | | |_| | / _ \ |  \| | |_  | |_) |
+ | |\  | | | |  _  |/ ___ \| |\  |  _| |  __/ 
+ |_| \_| |_| |_| |_/_/   \_\_| \_|_|   |_|    
+                                              \n";
+
+    return $string;
+}
+
 function create($username, $password, $email, $name, $proxy)
 {
 	$ch = curl_init();
