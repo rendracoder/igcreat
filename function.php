@@ -61,7 +61,7 @@ function proccessmail($host, $useragent, $cookie = 0, $data = 0, $httpheader = a
     }
 }
 
-function create($username, $password, $email, $name, $proxy)
+function create($username, $password, $email, $name, $proxy = 0, $userpwd = 0)
 {
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, "https://www.instagram.com/accounts/web_create_ajax/");
@@ -69,10 +69,10 @@ function create($username, $password, $email, $name, $proxy)
 	curl_setopt($ch, CURLOPT_POSTFIELDS, "email=".$email."&password=".$password."&username=".$username."&first_name=".$name."&seamless_login_enabled=1&tos_version=row");
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
-	if($proxy){
-	curl_setopt($ch, CURLOPT_PROXY, $proxy); // PROXY details with port
-	curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
-	}
+	if ($proxy)
+        curl_setopt($ch, CURLOPT_PROXY, $proxy);
+    if ($userpwd)
+        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $userpwd);
 
 	$headers = array();
 	$headers[] = "Host: www.instagram.com";
