@@ -28,8 +28,8 @@ while (true) {
     $name       = ucfirst($data['results'][0]['name']['first']);
     //echo "Insert your proxy : ";
     //$proxy      = trim(fgets(STDIN, 1024));
-    $proxy      = '';
-    $proxypwd   = '';
+    $proxy      = 0;
+    $proxypwd   = 0;
     $date       = date("Y-m-d");
     $file       = 'result.txt';
     $create     = create($username, $password, $email, $name, $proxy, $proxypwd);
