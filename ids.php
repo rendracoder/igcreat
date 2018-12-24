@@ -39,7 +39,7 @@ while (true) {
         $get   = fgets($file);
         $catat = fwrite($file, "" . $username . ":" . $password . "\n");
         fclose($file);
-        echo "Success create " . $username . ":" . $password . "\n";
+        echo "[Success create][".$username."][".$password."][".$email."]\n";
     } else if($data['errors']['ip']){
         echo $data['errors']['ip'][0]."\n";
     } else if($data['errors']['username']){
