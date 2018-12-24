@@ -37,7 +37,7 @@ while (true) {
     if($data['account_created'] == true){
         $file  = fopen($file, 'r+') or die("file not found!");
         $get   = fgets($file);
-        $catat = fwrite($file, "" . $username . ":" . $password . "\n");
+        $catat = fwrite($file, "".$username.":".$password.":".$email."\n");
         fclose($file);
         echo "[Success create][".$username."][".$password."][".$email."]\n";
     } else if($data['errors']['ip']){
